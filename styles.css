@@ -229,7 +229,6 @@ body {
 .hero-left {
     flex: 1.2;
     text-align: left;
-    padding-right: 2rem;
 }
 
 .hero-right {
@@ -877,6 +876,10 @@ body {
 
 /* Responsive Design */
 @media screen and (max-width: 768px) {
+    .theme-toggle {
+        top: 16px;
+        right: 70px;
+    }
     .nav-menu {
         position: fixed;
         left: -100%;
@@ -915,6 +918,8 @@ body {
         flex-direction: column-reverse;
         text-align: center;
         gap: 2rem;
+        padding: 0 1rem;
+        justify-content: center;
     }
 
     .hero-left {
@@ -1029,8 +1034,8 @@ body {
     }
 
     .theme-toggle {
-        top: 12px;
-        right: 15px;
+        top: 14px;
+        right: 80px;
         width: 40px;
         height: 40px;
         font-size: 1.1rem;
