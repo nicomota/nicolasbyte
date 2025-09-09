@@ -338,20 +338,15 @@ class CVManager {
     }
 
     downloadCV() {
-        // Create CV content
-        const cvContent = this.generateCVContent();
-        
-        // Create and download file
-        const blob = new Blob([cvContent], { type: 'text/plain;charset=utf-8' });
-        const url = window.URL.createObjectURL(blob);
+        // Create and download PDF file
         const a = document.createElement('a');
         
-        a.href = url;
-        a.download = 'Nicolas_da_Mota_CV.txt';
+        a.href = 'assets/Curriculo_Nicolas_2025.pdf';
+        a.download = 'Curriculo_Nicolas_2025.pdf';
+        a.target = '_blank';
         document.body.appendChild(a);
         a.click();
         document.body.removeChild(a);
-        window.URL.revokeObjectURL(url);
 
         // Show success message
         this.showDownloadMessage();
@@ -406,7 +401,7 @@ Data: ${new Date().toLocaleDateString('pt-BR')}
     showDownloadMessage() {
         // Create and show a temporary message
         const message = document.createElement('div');
-        message.textContent = 'CV baixado com sucesso! ✓';
+        message.textContent = 'PDF do CV baixado com sucesso! ✓';
         message.style.cssText = `
             position: fixed;
             top: 100px;

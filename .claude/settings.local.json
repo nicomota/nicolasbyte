@@ -4,7 +4,9 @@
       "WebFetch(domain:www.rhuanbello.com)",
       "Bash(start index.html)",
       "WebSearch",
-      "Bash(dir img)"
+      "Bash(dir img)",
+      "Bash(mkdir:*)",
+      "Bash(mv:*)"
     ],
     "deny": [],
     "ask": []
