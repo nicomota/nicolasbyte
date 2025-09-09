@@ -3,7 +3,8 @@
     "allow": [
       "WebFetch(domain:www.rhuanbello.com)",
       "Bash(start index.html)",
-      "WebSearch"
+      "WebSearch",
+      "Bash(dir img)"
     ],
     "deny": [],
     "ask": []

@@ -34,6 +34,9 @@ class ThemeManager {
         localStorage.setItem('theme', theme);
         this.currentTheme = theme;
         
+        // Update navbar background immediately
+        this.updateNavbarBackground();
+        
         // Update theme toggle button
         this.updateThemeToggle();
     }
@@ -59,6 +62,20 @@ class ThemeManager {
         } else {
             sunIcon.style.display = 'block';
             moonIcon.style.display = 'none';
+        }
+    }
+
+    updateNavbarBackground() {
+        const scrollY = window.scrollY;
+        
+        if (scrollY > 100) {
+            navbar.style.background = this.currentTheme === 'dark' 
+                ? 'rgba(19, 19, 31, 0.98)' 
+                : 'rgba(255, 255, 255, 0.98)';
+        } else {
+            navbar.style.background = this.currentTheme === 'dark' 
+                ? 'rgba(19, 19, 31, 0.95)' 
+                : 'rgba(255, 255, 255, 0.95)';
         }
     }
 }
@@ -129,15 +146,16 @@ class NavigationManager {
 
     handleScroll() {
         const scrollY = window.scrollY;
+        const currentTheme = document.body.getAttribute('data-theme');
         
         // Update navbar styling
         if (scrollY > 100) {
-            navbar.style.background = document.body.getAttribute('data-theme') === 'dark' 
+            navbar.style.background = currentTheme === 'dark' 
                 ? 'rgba(19, 19, 31, 0.98)' 
                 : 'rgba(255, 255, 255, 0.98)';
             navbar.style.boxShadow = '0 2px 20px rgba(130, 87, 230, 0.1)';
         } else {
-            navbar.style.background = document.body.getAttribute('data-theme') === 'dark' 
+            navbar.style.background = currentTheme === 'dark' 
                 ? 'rgba(19, 19, 31, 0.95)' 
                 : 'rgba(255, 255, 255, 0.95)';
             navbar.style.boxShadow = 'none';
@@ -329,7 +347,7 @@ class CVManager {
         const a = document.createElement('a');
         
         a.href = url;
-        a.download = 'Rhuan_Bello_CV.txt';
+        a.download = 'Nicolas_da_Mota_CV.txt';
         document.body.appendChild(a);
         a.click();
         document.body.removeChild(a);
@@ -341,30 +359,35 @@ class CVManager {
 
     generateCVContent() {
         return `
-RHUAN BELLO
+NÍCOLAS DA MOTA
 Desenvolvedor Front-end
 
 CONTATO
-Email: rhuanbello@gmail.com
-Telefone: (21) 96889-2704
-LinkedIn: linkedin.com/in/rhuanbello
-GitHub: github.com/rhuanbello
+Email: nicolas.santos0225@gmail.com
+Telefone: (48) 98852-7818
+LinkedIn: linkedin.com/in/nicomota
+GitHub: github.com/nicomota
 
 SOBRE
 Desenvolvedor Front-end com experiência em criar interfaces modernas e responsivas. 
-Especializado em React.js, Next.js e TypeScript, sempre buscando entregar a melhor 
+Especializado em React.js, TypeScript e JavaScript, sempre buscando entregar a melhor 
 experiência do usuário com código limpo e otimizado.
 
 HABILIDADES TÉCNICAS
-• React.js - Desenvolvimento de interfaces dinâmicas e componentes reutilizáveis
-• Next.js - Aplicações full-stack com SSR, SSG e otimizações de performance
+• HTML5 - Estruturação semântica e acessível de páginas web modernas
+• CSS3 - Estilização avançada com flexbox, grid e animações responsivas
+• JavaScript - Desenvolvimento moderno e interativo
 • TypeScript - Desenvolvimento type-safe para maior confiabilidade do código
-• Redux - Gerenciamento de estado para aplicações complexas
-• Styled Components - CSS-in-JS para estilização dinâmica e componentizada
+• React.js - Desenvolvimento de interfaces dinâmicas e componentes reutilizáveis
+• CSS-in-JS - Estilização dinâmica e componentizada
 • Tailwind CSS - Framework CSS utility-first para desenvolvimento rápido
+• Bootstrap - Framework CSS para desenvolvimento responsivo
+• Figma - Design e prototipagem de interfaces
+• Electron - Desenvolvimento de aplicações desktop multiplataforma
+• React Testing - Testes automatizados para aplicações React
 
 PROJETOS DESTACADOS
-• E-commerce Platform - Plataforma completa desenvolvida com React, Next.js e TypeScript
+• E-commerce Platform - Plataforma completa desenvolvida com React, TypeScript e Tailwind
 • Dashboard Analytics - Dashboard interativo com gráficos e métricas em tempo real
 • Task Manager App - Aplicativo de gerenciamento de tarefas com drag & drop
 
