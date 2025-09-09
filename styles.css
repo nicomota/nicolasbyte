@@ -637,6 +637,12 @@ body {
     overflow: hidden;
 }
 
+.project-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 .project-placeholder {
     color: var(--accent-primary);
     font-size: 1.2rem;
