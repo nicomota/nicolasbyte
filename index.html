@@ -3,162 +3,221 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rhuan Bello - Front-end Developer</title>
-    <meta name="description" content="Front-end developer specializing in creating fast, scalable digital experiences">
+    <title>Rhuan Bello - Desenvolvedor Front-end</title>
+    <meta name="description" content="Desenvolvedor Front-end especializado em criar experiências digitais rápidas, escaláveis e com foco em performance">
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
-<body>
-    <nav class="navbar">
+<body data-theme="dark">
+    <!-- Theme Toggle -->
+    <button class="theme-toggle" id="theme-toggle" aria-label="Alternar tema">
+        <span class="sun-icon">☀️</span>
+        <span class="moon-icon">🌙</span>
+    </button>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
         <div class="nav-container">
-            <div class="hamburger">
+            <a href="#hero" class="nav-logo">Portfólio</a>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#sobre" class="nav-link">Sobre</a></li>
+                <li><a href="#habilidades" class="nav-link">Habilidades</a></li>
+                <li><a href="#projetos" class="nav-link">Projetos</a></li>
+                <li><a href="#contatos" class="nav-link">Contatos</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
             </div>
-            <a href="#home" class="nav-logo">Portfólio</a>
-            <ul class="nav-menu">
-                <li class="nav-item">
-                    <a href="#about" class="nav-link">About</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#skills" class="nav-link">Skills</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#projects" class="nav-link">Projects</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#contact" class="nav-link">Contact</a>
-                </li>
-            </ul>
         </div>
     </nav>
 
     <main>
-        <section id="home" class="hero">
-            <div class="hero-container">
+        <!-- Hero Section -->
+        <section id="hero" class="hero">
+            <div class="container">
                 <div class="hero-content">
-                    <div class="profile-image">
-                        <div class="profile-circle">RB</div>
+                    <div class="hero-left">
+                        <h1 class="hero-title">Desenvolvedor <br><span class="highlight">Front-end</span></h1>
+                        <p class="hero-description">
+                            Especializado em criar experiências digitais rápidas, escaláveis e com foco em performance
+                        </p>
+                        <div class="hero-buttons">
+                            <a href="#" class="btn btn-primary" id="download-cv">Download CV</a>
+                            <a href="#contatos" class="btn btn-outline">Entrar em contato</a>
+                        </div>
                     </div>
-                    <h1 class="hero-title">Rhuan Bello</h1>
-                    <p class="hero-subtitle">
-                        Front-end developer specializing in creating fast, scalable digital experiences
-                    </p>
-                    <div class="hero-buttons">
-                        <a href="#" class="btn-download" id="download-cv">Download CV</a>
+                    <div class="hero-right">
+                        <div class="profile-image">
+                            <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='150' height='150' viewBox='0 0 150 150'><circle cx='75' cy='75' r='75' fill='%238257E6'/><text x='75' y='85' text-anchor='middle' fill='white' font-family='Inter' font-size='50' font-weight='bold'>RB</text></svg>" alt="Rhuan Bello" class="avatar">
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="about" class="about">
+        <!-- About Section -->
+        <section id="sobre" class="section">
             <div class="container">
-                <h2 class="section-title">About</h2>
+                <h2 class="section-title">Sobre</h2>
                 <div class="about-content">
                     <p class="about-text">
-                        Front-end developer specializing in creating fast, scalable digital experiences. 
-                        I work with modern technologies to build responsive and user-friendly web applications.
+                        Desenvolvedor Front-end com experiência em criar interfaces modernas e responsivas. 
+                        Especializado em React.js, Next.js e TypeScript, sempre buscando entregar a melhor 
+                        experiência do usuário com código limpo e otimizado.
                     </p>
                 </div>
             </div>
         </section>
 
-        <section id="skills" class="skills">
+        <!-- Skills Section -->
+        <section id="habilidades" class="section">
             <div class="container">
-                <h2 class="section-title">Skills</h2>
-                <div class="skills-list">
-                    <div class="skill-category">
-                        <h3>Frontend</h3>
-                        <ul>
-                            <li>React.js</li>
-                            <li>Next.js</li>
-                            <li>TypeScript</li>
-                            <li>JavaScript ES6+</li>
-                            <li>HTML5 & CSS3</li>
-                            <li>SASS/SCSS</li>
-                        </ul>
+                <h2 class="section-title">Habilidades</h2>
+                <div class="skills-grid">
+                    <div class="skill-card" data-skill="react">
+                        <div class="skill-icon">
+                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg" alt="React">
+                        </div>
+                        <h3>React.js</h3>
+                        <p>Desenvolvimento de interfaces dinâmicas e componentes reutilizáveis</p>
                     </div>
-                    <div class="skill-category">
-                        <h3>Tools & Libraries</h3>
-                        <ul>
-                            <li>Redux</li>
-                            <li>Webpack</li>
-                            <li>Git</li>
-                            <li>Figma</li>
-                            <li>Responsive Design</li>
-                            <li>REST APIs</li>
-                        </ul>
+                    <div class="skill-card" data-skill="nextjs">
+                        <div class="skill-icon">
+                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nextjs/nextjs-original.svg" alt="Next.js">
+                        </div>
+                        <h3>Next.js</h3>
+                        <p>Aplicações full-stack com SSR, SSG e otimizações de performance</p>
+                    </div>
+                    <div class="skill-card" data-skill="typescript">
+                        <div class="skill-icon">
+                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg" alt="TypeScript">
+                        </div>
+                        <h3>TypeScript</h3>
+                        <p>Desenvolvimento type-safe para maior confiabilidade do código</p>
+                    </div>
+                    <div class="skill-card" data-skill="redux">
+                        <div class="skill-icon">
+                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/redux/redux-original.svg" alt="Redux">
+                        </div>
+                        <h3>Redux</h3>
+                        <p>Gerenciamento de estado para aplicações complexas</p>
+                    </div>
+                    <div class="skill-card" data-skill="styled">
+                        <div class="skill-icon">💅</div>
+                        <h3>Styled Components</h3>
+                        <p>CSS-in-JS para estilização dinâmica e componentizada</p>
+                    </div>
+                    <div class="skill-card" data-skill="tailwind">
+                        <div class="skill-icon">
+                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/tailwindcss/tailwindcss-plain.svg" alt="Tailwind">
+                        </div>
+                        <h3>Tailwind CSS</h3>
+                        <p>Framework CSS utility-first para desenvolvimento rápido</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="projects" class="projects">
+        <!-- Projects Section -->
+        <section id="projetos" class="section">
             <div class="container">
-                <h2 class="section-title">Projects</h2>
-                <div class="projects-grid">
-                    <div class="project-card">
-                        <div class="project-image">
-                            <div class="project-placeholder">Project 1</div>
-                        </div>
-                        <div class="project-content">
-                            <h3 class="project-title">E-commerce Platform</h3>
-                            <p class="project-description">
-                                A modern e-commerce solution built with React, Next.js, and TypeScript
-                            </p>
-                            <div class="project-tech">
-                                <span class="tech-tag">React</span>
-                                <span class="tech-tag">Next.js</span>
-                                <span class="tech-tag">TypeScript</span>
+                <h2 class="section-title">Projetos</h2>
+                
+                <!-- Featured Projects -->
+                <div class="projects-section">
+                    <h3 class="subsection-title">Destaques</h3>
+                    <div class="projects-grid">
+                        <div class="project-card featured">
+                            <div class="project-image">
+                                <div class="project-placeholder">E-commerce Platform</div>
                             </div>
-                            <div class="project-links">
-                                <a href="#" class="project-link">View Live</a>
-                                <a href="#" class="project-link">GitHub</a>
+                            <div class="project-content">
+                                <h4 class="project-title">E-commerce Platform</h4>
+                                <p class="project-description">
+                                    Plataforma completa de e-commerce desenvolvida com React, Next.js e TypeScript
+                                </p>
+                                <div class="project-tech">
+                                    <span class="tech-tag">React</span>
+                                    <span class="tech-tag">Next.js</span>
+                                    <span class="tech-tag">TypeScript</span>
+                                    <span class="tech-tag">Tailwind</span>
+                                </div>
+                                <div class="project-links">
+                                    <a href="#" class="project-link">Acessar projeto</a>
+                                    <a href="#" class="project-link">Acessar repositório</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-card featured">
+                            <div class="project-image">
+                                <div class="project-placeholder">Dashboard Analytics</div>
+                            </div>
+                            <div class="project-content">
+                                <h4 class="project-title">Dashboard Analytics</h4>
+                                <p class="project-description">
+                                    Dashboard interativo para análise de dados com gráficos e métricas em tempo real
+                                </p>
+                                <div class="project-tech">
+                                    <span class="tech-tag">React</span>
+                                    <span class="tech-tag">Redux</span>
+                                    <span class="tech-tag">Chart.js</span>
+                                </div>
+                                <div class="project-links">
+                                    <a href="#" class="project-link">Acessar projeto</a>
+                                    <a href="#" class="project-link">Ver post no Linkedin</a>
+                                </div>
                             </div>
                         </div>
                     </div>
+                </div>
 
-                    <div class="project-card">
-                        <div class="project-image">
-                            <div class="project-placeholder">Project 2</div>
-                        </div>
-                        <div class="project-content">
-                            <h3 class="project-title">Task Management App</h3>
-                            <p class="project-description">
-                                A productivity app with drag-and-drop functionality and real-time updates
-                            </p>
-                            <div class="project-tech">
-                                <span class="tech-tag">React</span>
-                                <span class="tech-tag">Redux</span>
-                                <span class="tech-tag">SASS</span>
+                <!-- All Projects -->
+                <div class="projects-section">
+                    <h3 class="subsection-title">Todos os projetos</h3>
+                    <div class="projects-list">
+                        <div class="project-item">
+                            <div class="project-info">
+                                <h4>Task Manager App</h4>
+                                <p>Aplicativo de gerenciamento de tarefas com drag & drop</p>
+                                <div class="project-tech">
+                                    <span class="tech-tag">React</span>
+                                    <span class="tech-tag">DnD Kit</span>
+                                </div>
                             </div>
                             <div class="project-links">
-                                <a href="#" class="project-link">View Live</a>
-                                <a href="#" class="project-link">GitHub</a>
+                                <a href="#" class="project-link">Acessar</a>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="project-card">
-                        <div class="project-image">
-                            <div class="project-placeholder">Project 3</div>
-                        </div>
-                        <div class="project-content">
-                            <h3 class="project-title">Portfolio Website</h3>
-                            <p class="project-description">
-                                A responsive portfolio showcasing modern web development techniques
-                            </p>
-                            <div class="project-tech">
-                                <span class="tech-tag">HTML5</span>
-                                <span class="tech-tag">CSS3</span>
-                                <span class="tech-tag">JavaScript</span>
+                        <div class="project-item">
+                            <div class="project-info">
+                                <h4>Weather App</h4>
+                                <p>Aplicação de previsão do tempo com geolocalização</p>
+                                <div class="project-tech">
+                                    <span class="tech-tag">React</span>
+                                    <span class="tech-tag">API</span>
+                                </div>
                             </div>
                             <div class="project-links">
-                                <a href="#" class="project-link">View Live</a>
-                                <a href="#" class="project-link">GitHub</a>
+                                <a href="#" class="project-link">Acessar</a>
+                            </div>
+                        </div>
+                        <div class="project-item">
+                            <div class="project-info">
+                                <h4>Portfolio Website</h4>
+                                <p>Site pessoal responsivo com tema claro/escuro</p>
+                                <div class="project-tech">
+                                    <span class="tech-tag">HTML</span>
+                                    <span class="tech-tag">CSS</span>
+                                    <span class="tech-tag">JavaScript</span>
+                                </div>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="project-link">Acessar</a>
                             </div>
                         </div>
                     </div>
@@ -166,25 +225,38 @@
             </div>
         </section>
 
-        <section id="contact" class="contact">
+        <!-- Contact Section -->
+        <section id="contatos" class="section">
             <div class="container">
-                <h2 class="section-title">Contacts</h2>
-                <div class="contact-links">
-                    <a href="mailto:rhuan@example.com" class="contact-item">
-                        <div class="contact-icon">✉</div>
-                        <span>rhuan@example.com</span>
+                <h2 class="section-title">Contatos</h2>
+                <div class="contacts-grid">
+                    <a href="mailto:rhuanbello@gmail.com" class="contact-item">
+                        <div class="contact-icon">📧</div>
+                        <div class="contact-info">
+                            <span class="contact-label">Email</span>
+                            <span class="contact-value">rhuanbello@gmail.com</span>
+                        </div>
                     </a>
-                    <a href="https://wa.me/5511999999999" class="contact-item" target="_blank">
+                    <a href="tel:+5521968892704" class="contact-item">
                         <div class="contact-icon">📱</div>
-                        <span>+55 11 99999-9999</span>
+                        <div class="contact-info">
+                            <span class="contact-label">Telefone</span>
+                            <span class="contact-value">(21) 96889-2704</span>
+                        </div>
                     </a>
-                    <a href="https://linkedin.com/in/rhuanbello" class="contact-item" target="_blank">
+                    <a href="https://linkedin.com/in/rhuanbello" target="_blank" class="contact-item">
                         <div class="contact-icon">💼</div>
-                        <span>LinkedIn</span>
+                        <div class="contact-info">
+                            <span class="contact-label">LinkedIn</span>
+                            <span class="contact-value">@rhuanbello</span>
+                        </div>
                     </a>
-                    <a href="https://github.com/rhuanbello" class="contact-item" target="_blank">
+                    <a href="https://github.com/rhuanbello" target="_blank" class="contact-item">
                         <div class="contact-icon">🐙</div>
-                        <span>GitHub</span>
+                        <div class="contact-info">
+                            <span class="contact-label">GitHub</span>
+                            <span class="contact-value">@rhuanbello</span>
+                        </div>
                     </a>
                 </div>
             </div>
@@ -193,7 +265,7 @@
 
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2024 Rhuan Bello. All rights reserved.</p>
+            <p>&copy; 2024 Rhuan Bello. Todos os direitos reservados.</p>
         </div>
     </footer>
 
