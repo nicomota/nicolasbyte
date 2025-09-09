@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:www.rhuanbello.com)",
+      "Bash(start index.html)",
+      "WebSearch"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
